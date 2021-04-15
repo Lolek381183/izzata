@@ -1,0 +1,109 @@
+/* Initialize Fonts, Responsivness, common stuff and margins */
+@media screen and (min-width: 801px) {
+  .des:hover + .des1 {
+    -webkit-transform: translateY(-20vw);
+    transform: translateY(-20vw);
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 301px) {
+  .des:hover + .des1 {
+    -webkit-transform: translateY(-30vw);
+    transform: translateY(-30vw);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .des:hover + .des1 {
+    -webkit-transform: translateY(-40vw);
+    transform: translateY(-40vw);
+  }
+}
+
+@media screen and (min-width: 401px) {
+  .Item__Name__Text {
+    font-size: 16px;
+  }
+
+  .Item__Price {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Item__Name__Text {
+    font-size: 11px;
+  }
+
+  .Item__Price {
+    font-size: 9px;
+  }
+}
+
+.Item__Img__Container {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.Item__Img {
+  width: 80%;
+}
+
+.des:hover {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.1;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.des1 {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  font-family: "Arima";
+  pointer-events: none;
+}
+
+.des:hover + .des2 {
+  display: block;
+}
+
+.des2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  height: 30px;
+  width: 70px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  pointer-events: none;
+  display: none;
+}
+
+.Item__Comprar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Arima";
+  text-align: center;
+  pointer-events: none;
+}

@@ -1,0 +1,209 @@
+@media screen and (min-width: 900px) {
+  .Pagar__inner {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 2.5% 67.5%;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .Pagar__inner {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+  }
+}
+
+.Pagar__outter {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.Pagar__info {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border: solid rgb(221, 221, 221) 1px;
+}
+
+.Pagar__info__titulo {
+  font-family: "Arima";
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: solid rgb(221, 221, 221) 1px;
+}
+
+.Pagar__info__titulo__inner {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-0%, -50%);
+}
+
+.Pagar__info__form__outter {
+  font-family: "Arima";
+
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.Pagar__info__form__inner {
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 47.5% 5% 47.5%;
+}
+
+.Pagar__info__form__1 {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  height: 380px;
+}
+.Pagar__info__form__2 {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.Pagar__segura {
+  text-align: center;
+  cursor: pointer;
+}
+
+.Pagar__segura__inner {
+  height: 50px;
+  position: relative;
+  left: 25%;
+  width: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Arima";
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.Pagar__segura__inner__inner {
+  cursor: pointer;
+  padding-top: 14px;
+}
+
+.Pagar__total {
+  position: relative;
+  font-family: "Arima";
+  width: 100%;
+  height: 600px;
+  border: solid rgb(221, 221, 221) 1px;
+  background-color: rgba(224, 222, 222, 0.097);
+}
+
+.Pagar__total__inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Pagar__total__cupon {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.Pagar__total__agregar {
+  text-align: center;
+  cursor: pointer;
+  padding-top: 8px;
+  border-radius: 5px;
+}
+
+.Pagar__total__agregar__inner {
+  height: 50px;
+
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Arima";
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.Pagar__total__agregar__inner__inner {
+  padding-top: 14px;
+  cursor: pointer;
+}
+
+.Pagar__total__codigo {
+  width: 80%;
+  font-size: 12px;
+  text-align: right;
+  position: absolute;
+}
+
+.Pagar__total__ubicacion {
+  width: 80%;
+  margin: 0 auto;
+}
+.Pagar__total__cuentas__finales {
+  width: 100%;
+  position: relative;
+}
+
+.Pagar__total__cuentas__finales__inner {
+  width: 80%;
+  margin: 0 auto;
+
+  height: 100px;
+  border-radius: 5px;
+}
+
+.Pagar__total__cuentas__finales__item {
+  width: auto;
+
+  padding-top: 5px;
+}
+.Pagar__total__cuentas__finales__precio {
+  position: absolute;
+  width: 60px;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+
+.Pagar__total__cuentas__finales__precio__total {
+  position: absolute;
+  width: 60px;
+  top: 50%;
+  left: 100%;
+  transform: translate(-120%, -50%);
+}
+.Pagar__total__cuentas__finales__inner__item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Pagar__total__total {
+  font-family: "Arima";
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-top: solid rgb(221, 221, 221) 1px;
+}

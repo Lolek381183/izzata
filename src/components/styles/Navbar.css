@@ -1,0 +1,448 @@
+/* Initialize Fonts, Responsivness, common stuff and margins */
+@font-face {
+  font-family: "Arima";
+  src: local("Arima"), url(./fonts/ArimaMadurai-Regular.ttf) format("truetype");
+}
+
+.Link {
+  transition: 0.3s ease;
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  text-decoration: none;
+  padding: 20px 0;
+  color: black;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.Link:hover {
+  border-top: 4px solid #000000;
+  border-bottom: 4px solid #000000;
+  text-decoration: none;
+  padding: 6px 0;
+}
+.Link__Container {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1151px) {
+  .Navbar__Menu__Buscar__Barra {
+    visibility: visible;
+  }
+  .Navbar__Menu__Menu__Inner {
+    visibility: visible;
+  }
+  .Navbar__Menu__Menu__Phone {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .Navbar__Menu__Buscar__Barra {
+    visibility: hidden;
+  }
+  .Navbar__Menu__Menu__Inner {
+    visibility: hidden;
+  }
+  .Navbar__Menu__Menu__Phone {
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 331px) {
+  .Navbar__Envios__Inner {
+    font-size: 13px;
+  }
+  .Navbar__Envios {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 330px) and (min-width: 251px) {
+  .Navbar__Envios__Inner {
+    font-size: 10px;
+  }
+  .Navbar__Envios {
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .Navbar__Envios__Inner {
+    font-size: 8px;
+  }
+  .Navbar__Envios {
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  .Navbar__Menu__Img__Img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) and (min-width: 251px) {
+  .Navbar__Menu__Img__Img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .Navbar__Menu__Img__Img {
+    width: 100px;
+  }
+}
+
+/* Envíos */
+.Navbar__Envios {
+  width: 100%;
+  background-color: black;
+  position: relative;
+  display: inline-block;
+}
+
+.Navbar__Envios__Inner {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  width: 99%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-family: "Arima";
+}
+
+/* Menu */
+.Navbar__Menu {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  border-bottom: 1px solid rgba(170, 106, 106, 0.3);
+}
+
+.Navbar__Menu__Inner {
+  width: 80%;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  text-align: center;
+  grid-template-columns: 40% 20% 40%;
+}
+
+.Navbar__Menu__Menu {
+  width: 100%;
+  position: relative;
+}
+
+.Navbar__Menu__Img {
+  width: 100%;
+  position: relative;
+}
+
+.Navbar__Menu__Buscar {
+  width: 100%;
+  position: relative;
+}
+
+.Navbar__Menu__Menu__Inner {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  top: 60%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  font-size: 15px;
+  font-family: "Arima";
+  font-weight: bold;
+  color: black;
+}
+
+.Navbar__Menu__Img__Inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Navbar__Menu__Buscar__Inner {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: flex;
+  transform: translate(-100%, -50%);
+}
+
+/* Nabvar Central Image */
+.Navbar__Menu__Img__Img {
+  background-color: transparent;
+}
+
+/* Nabvar looking up bar */
+.Navbar__Menu__Buscar__Barra {
+  border: none;
+  height: 30px;
+  border-bottom: rgb(70, 70, 70, 0.1) solid 1px;
+  background: url("../../images/search.svg") no-repeat;
+  background-size: 20px;
+  background-position: right;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.Navbar__Menu__Buscar__Cart {
+  padding-top: 5px;
+  padding-left: 20px;
+  width: 25px;
+}
+
+.Navbar__Menu__Menu__Phone {
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  transform: translate(0, -50%);
+}
+.Navbar__side__menu {
+  height: 100vh;
+  width: 0;
+  position: absolute;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-size: 20px;
+  font-family: "Arima";
+}
+
+.Navbar__side__menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.Navbar__side__menu a:hover {
+  color: #000000;
+}
+
+.Navbar__side__menu .Navbar__closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.Navbar__side__cart {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 20px;
+  font-family: "Arima";
+}
+
+.Navbar__side__cart a {
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.Navbar__side__cart a:hover {
+  color: #000000;
+}
+
+.Navbar__side__cart .Navbar__cart__closebtn {
+  position: absolute;
+  z-index: 80;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.Navbar__cart__bolsa__compras {
+  position: relative;
+  width: 85%;
+  padding-top: 18px;
+  padding-left: 5%;
+  text-align: left;
+  font-family: "Arima";
+  font-size: 17px;
+}
+
+.Navbar__cart__carrito__compras {
+  width: 18px;
+}
+
+.Navbar__cart__blank__border {
+  width: 100%;
+  height: 20px;
+  border-bottom: solid rgb(160, 160, 160) 1px;
+}
+
+.Navbar__cart__subtotal {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.Navbar__cart__subtotal__title {
+  width: auto;
+  height: 20px;
+  top: 50%;
+  left: 15%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+.Navbar__cart__subtotal__sum {
+  width: auto;
+  height: 20px;
+  top: 50%;
+  left: 80%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+.Navbar__cart__producto {
+  height: 150px;
+  border-top: solid rgb(160, 160, 160) 1px;
+  border-bottom: solid rgb(160, 160, 160) 1px;
+  position: relative;
+  width: 100%;
+}
+
+.Navbar__cart__producto__img {
+  width: 90px;
+
+  top: 50%;
+  left: 20%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.Navbar__cart__producto__img__archivo {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.Navbar__cart__producto__nombre {
+  top: 30%;
+  left: 37%;
+  position: absolute;
+  font-family: "Arima";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  transform: translate(0%, -50%);
+}
+
+.Navbar__cart__producto__talla {
+  top: 45%;
+  left: 40%;
+  position: absolute;
+  font-family: "Arima";
+  color: rgb(160, 160, 160);
+  font-size: 12px;
+  transform: translate(0%, -50%);
+}
+
+.Navbar__cart__producto__color {
+  top: 65%;
+  left: 40%;
+  position: absolute;
+  display: flex;
+  font-family: "Arima";
+  color: rgb(160, 160, 160);
+  font-size: 12px;
+  transform: translate(0%, -50%);
+}
+
+.Navbar__cart__producto__color__div {
+  margin: 2px;
+  border: solid rgb(160, 160, 160) 1px;
+  width: 33px;
+  height: 20px;
+}
+
+.Navbar__cart__pagar {
+  height: 50px;
+  position: relative;
+  left: 10%;
+  width: 80%;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Arima";
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.Navbar__cart__pagar__outter {
+  text-align: center;
+}
+
+.Navbar__cart__producto__precio {
+  top: 55%;
+  left: 68%;
+  position: absolute;
+  font-family: "Arima";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+  transform: translate(0%, -50%);
+}
+
+.Navbar__cart__producto__closebtn {
+  position: absolute;
+  top: -5%;
+  left: 90%;
+}
+.Navbar__cart__counter {
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  font-family: "Arima";
+  font-size: 10.5px;
+  color: white;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  font-weight: bold;
+}
+
+.Navbar__cart__pagar_inner {
+  padding-top: 14px;
+}

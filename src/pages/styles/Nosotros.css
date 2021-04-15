@@ -1,0 +1,48 @@
+#circle-shape-example {
+  font-family: "Arima";
+  margin: 2rem;
+}
+
+#circle-shape-example .curve {
+  width: 35%;
+  height: auto;
+  position: relative;
+  min-width: 150px;
+  float: left;
+  margin-right: 2rem;
+  border-radius: 50%;
+  -webkit-shape-outside: circle();
+  shape-outside: circle();
+}
+
+.Nosotros__outer {
+  position: relative;
+  width: 100%;
+  font-family: "Arima";
+  font-size: 14px;
+  height: auto;
+}
+
+.Nosotros__inner {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.Nosotros__inner__inner {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}
+.Nosotros__inner__inner__logo {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.Nosotros__Logo {
+  width: 100%;
+}
