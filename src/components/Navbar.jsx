@@ -177,7 +177,7 @@ class Navbar extends React.Component {
             </div>
             <div className="Navbar__Menu__Img">
               <div className="Navbar__Menu__Img__Inner">
-                <Link to="/">
+                <Link to="/Subir">
                   <img
                     src={Name}
                     alt="Bhand"
