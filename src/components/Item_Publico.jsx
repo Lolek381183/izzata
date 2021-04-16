@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/Item.css";
-import prueba from "../images/item.jpg";
 
 class Item_Publico extends React.Component {
   constructor(props) {
@@ -35,7 +34,11 @@ class Item_Publico extends React.Component {
               onMouseOver={this.changeBackground}
               onMouseOut={this.changeBackground1}
             >
-              <img src={prueba} alt="Img_Producto" className="Item__Img" />
+              <img
+                src={this.state.backend + "/" + this.props.img}
+                alt="Img_Producto"
+                className="Item__Img"
+              />
             </div>
             <div className="des1">
               <div className="Item__Name__Text">
