@@ -143,7 +143,6 @@ class Pagar extends React.Component {
           "&redirectUrl=https%3A%2F%2Ftransaction-redirect.wompi.co%2Fcheck",
         "_self"
       );
-      win.focus();
     } else {
       this.setState({
         Mensaje1: "Campos faltantes",
