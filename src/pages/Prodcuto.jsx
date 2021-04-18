@@ -63,11 +63,21 @@ class Producto extends React.Component {
           Nombre: response.data[0].nombre,
           Precio: response.data[0].precio,
           Detalles: response.data[0].detalles,
-          Img_1: this.state.backend + "/" + response.data[0].img_1,
-          Img_2: this.state.backend + "/" + response.data[0].img_2,
-          Img_3: this.state.backend + "/" + response.data[0].img_3,
-          Img_4: this.state.backend + "/" + response.data[0].img_4,
-          Img_5: this.state.backend + "/" + response.data[0].img_5,
+          Img_1:
+            "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/" +
+            response.data[0].img_1,
+          Img_2:
+            "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/" +
+            response.data[0].img_2,
+          Img_3:
+            "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/" +
+            response.data[0].img_3,
+          Img_4:
+            "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/" +
+            response.data[0].img_4,
+          Img_5:
+            "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/" +
+            response.data[0].img_5,
           Color_1:
             lookProduct[0].color_1 != null
               ? lookProduct[0].color_1.split(",", 4)[0]
@@ -390,7 +400,7 @@ class Producto extends React.Component {
                     <div></div>
                   )}
                   {this.state.Producto_info.Img_2 !==
-                  this.state.backend + "/null" ? (
+                  "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/null" ? (
                     <img
                       className="Producto__zoom__img"
                       src={this.state.Producto_info.Img_2}
@@ -403,7 +413,7 @@ class Producto extends React.Component {
                     <div></div>
                   )}
                   {this.state.Producto_info.Img_3 !==
-                  this.state.backend + "/null" ? (
+                  "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/null" ? (
                     <img
                       className="Producto__zoom__img"
                       src={this.state.Producto_info.Img_3}
@@ -416,7 +426,7 @@ class Producto extends React.Component {
                     <div></div>
                   )}
                   {this.state.Producto_info.Img_4 !==
-                  this.state.backend + "/null" ? (
+                  "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/null" ? (
                     <img
                       className="Producto__zoom__img"
                       src={this.state.Producto_info.Img_4}
@@ -429,7 +439,7 @@ class Producto extends React.Component {
                     <div></div>
                   )}
                   {this.state.Producto_info.Img_5 !==
-                  this.state.backend + "/null" ? (
+                  "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/null" ? (
                     <img
                       className="Producto__zoom__img"
                       src={this.state.Producto_info.Img_5}

@@ -21,6 +21,10 @@
   visibility: hidden;
 }
 
+.carousel img {
+  background-color: white;
+}
+
 .thumbs-wrapper {
   visibility: hidden;
   display: none;

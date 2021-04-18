@@ -5,8 +5,10 @@ import { Carousel } from "react-responsive-carousel";
 import Item from "../components/Item_Publico.jsx";
 import Axios from "axios";
 
-import Banner_1 from "../images/Banner_1.jpg";
+import Banner_1 from "../images/Banner_1.png";
 import Banner_2 from "../images/Banner_2.png";
+import Banner_3 from "../images/Banner_3.png";
+
 import Whatsapp from "../images/Whatsapp__right.png";
 
 import "./styles/Ultimo.css";
@@ -37,7 +39,13 @@ class Ultimo extends React.Component {
           <img src={Whatsapp} alt="Whatsapp" className="fixedbutton" />
         </a>
 
-        <div style={{ display: "inline-block", position: "relative" }}>
+        <div
+          style={{
+            display: "inline-block",
+            position: "relative",
+            backgroundColor: "white",
+          }}
+        >
           <Carousel>
             <div>
               <img src={Banner_1} alt="Banner_1" />
@@ -46,7 +54,7 @@ class Ultimo extends React.Component {
               <img src={Banner_2} alt="Banner_2" />
             </div>
             <div>
-              <img src={Banner_2} alt="Banner_3" />
+              <img src={Banner_3} alt="Banner_3" />
             </div>
           </Carousel>
         </div>

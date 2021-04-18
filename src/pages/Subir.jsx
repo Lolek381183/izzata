@@ -257,8 +257,8 @@ class Subir extends React.Component {
     });
   };
 
-  addProduct = (e) => {
-    Axios.post(this.state.backend + "/create", {
+  addProduct = async (e) => {
+    await Axios.post(this.state.backend + "/create", {
       Id: this.state.form.Id,
       Nombre: this.state.form.Nombre,
       Precio: this.state.form.Precio,
@@ -305,8 +305,7 @@ class Subir extends React.Component {
       if (this.state.form.Img_5.name !== undefined) {
         this.uploadFile(this.state.form.Img_5);
       }
-
-      alert("Producto creado");
+      alert("Espere un momento");
     });
   };
 
@@ -316,11 +315,10 @@ class Subir extends React.Component {
     });
   };
 
-  uploadFile = (e) => {
+  uploadFile = async (e) => {
     const formData = new FormData();
     formData.append("file", e); // appending file
-    Axios.post(this.state.backend + "/upload", formData)
-
+    await Axios.post(this.state.backend + "/upload", formData)
       .then((res) => {
         console.log(res);
       })
@@ -397,7 +395,6 @@ class Subir extends React.Component {
           this.state.backend + `/deletei/${this.state.img_1_delete}`
         ).then((response) => {
           if (this.state.img_2_delete !== null) {
-            console.log("esta entrando");
             Axios.delete(
               this.state.backend + `/deletei/${this.state.img_2_delete}`
             ).then((response) => {
@@ -414,22 +411,22 @@ class Subir extends React.Component {
                           this.state.backend +
                             `/deletei/${this.state.img_5_delete}`
                         ).then((response) => {
-                          window.location.reload();
+                          console.log("listo");
                         });
                       }
-                      window.location.reload();
+                      console.log("listo");
                     });
                   }
-                  window.location.reload();
+                  console.log("listo");
                 });
               }
-              window.location.reload();
+              console.log("listo");
             });
           }
-          window.location.reload();
+          console.log("listo");
         });
       }
-      window.location.reload();
+      console.log("listo");
     });
   };
   handleEntrance = () => {

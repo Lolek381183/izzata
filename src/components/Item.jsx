@@ -43,7 +43,10 @@ class Item extends React.Component {
             onMouseOut={this.changeBackground1}
           >
             <img
-              src={this.state.backend + "/" + this.props.img}
+              src={
+                "https://bucketeer-7a95e2ad-f5e2-4b34-aae6-d8960a86ad88.s3.amazonaws.com/izzata/" +
+                this.props.img
+              }
               alt="Img_Producto"
               className="Item__Img"
             />
