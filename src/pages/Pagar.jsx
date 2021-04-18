@@ -104,6 +104,7 @@ class Pagar extends React.Component {
       ),
     }).then((response) => {
       console.log(response);
+      this.handlePay();
     });
   };
 
@@ -121,7 +122,6 @@ class Pagar extends React.Component {
       this.setState({
         Mensaje1: "",
       });
-      this.addProduct();
       var win = window.open(
         "https://checkout.wompi.co/p/?public-key=pub_prod_CdeQGWy0j7HYxnaNX3Dg4HtyiT7N67at&currency=COP&amount-in-cents=" +
           (
@@ -143,6 +143,7 @@ class Pagar extends React.Component {
           "&redirectUrl=https%3A%2F%2Ftransaction-redirect.wompi.co%2Fcheck",
         "_self"
       );
+      win.focus();
     } else {
       this.setState({
         Mensaje1: "Campos faltantes",
@@ -1569,7 +1570,7 @@ class Pagar extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="Pagar__segura" onClick={this.handlePay}>
+                <div className="Pagar__segura" onClick={this.addProduct}>
                   <div className="Pagar__segura__inner">
                     <div className="Pagar__segura__inner__inner">PAGAR</div>
                   </div>
