@@ -31,7 +31,7 @@ class Producto extends React.Component {
       detalles: false,
       envios: false,
       Over: "beside",
-      backend: "https://izzata.herokuapp.com",
+      backend: "https://backend.izzata.co",
       selectedColor: "",
       selectedColor_S: true,
       selectedColor_M: true,

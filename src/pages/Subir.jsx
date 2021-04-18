@@ -72,7 +72,7 @@ class Subir extends React.Component {
           img_5: "",
         },
       ],
-      backend: "https://izzata.herokuapp.com",
+      backend: "https://backend.izzata.co",
     };
   }
 

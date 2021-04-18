@@ -23,7 +23,7 @@ class Pagar extends React.Component {
       Codigo: "",
       Codigos: { descuento: "0" },
       Mensaje: "",
-      backend: "https://izzata.herokuapp.com",
+      backend: "https://backend.izzata.co",
       Subtotal: this.props.suma,
       Envio: "0",
       fecha: new Date(),
@@ -75,6 +75,11 @@ class Pagar extends React.Component {
           Envio: "9800",
         });
       }
+    }
+    if (this.props.suma > 99900) {
+      this.setState({
+        Envio: "0",
+      });
     }
   };
 

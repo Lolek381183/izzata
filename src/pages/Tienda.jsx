@@ -9,7 +9,7 @@ class Tienda extends React.Component {
     super(props);
     this.state = {
       productList: [],
-      backend: "https://izzata.herokuapp.com",
+      backend: "https://backend.izzata.co",
     };
   }
 

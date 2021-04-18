@@ -7,7 +7,7 @@ class Item_Publico extends React.Component {
     super(props);
     this.state = {
       name: props.id,
-      backend: "https://izzata.herokuapp.com",
+      backend: "https://backend.izzata.co",
       precio: this.props.price.slice(-7, -3) + "." + this.props.price.slice(-3),
     };
   }
