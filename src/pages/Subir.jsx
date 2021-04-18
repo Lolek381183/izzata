@@ -305,7 +305,7 @@ class Subir extends React.Component {
       if (this.state.form.Img_5.name !== undefined) {
         this.uploadFile(this.state.form.Img_5);
       }
-      alert("Espere un momento");
+      alert("Prodcuto creado");
     });
   };
 
@@ -428,6 +428,7 @@ class Subir extends React.Component {
       }
       console.log("listo");
     });
+    alert("Producto borrado");
   };
   handleEntrance = () => {
     if (this.state.form.Password === "DWMTM") {
