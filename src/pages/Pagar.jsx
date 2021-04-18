@@ -102,7 +102,9 @@ class Pagar extends React.Component {
       Productos: this.props.productos.map(
         (j) => j.nombre + "-" + j.talla + "-" + j.color
       ),
-    }).then((response) => {});
+    }).then((response) => {
+      console.log(response);
+    });
   };
 
   handlePay = () => {
