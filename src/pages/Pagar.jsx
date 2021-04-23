@@ -525,7 +525,7 @@ class Pagar extends React.Component {
                   <div></div>
                   <div className="Pagar__segura__inner">
                     <div
-                      className="Pagar__segura__inner__inner__1"
+                      className="Pagar__segura__inner__inner"
                       onClick={this.addProduct1}
                     >
                       COMUNICATE CON UNA ASESORA
