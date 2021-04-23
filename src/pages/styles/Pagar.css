@@ -9,6 +9,7 @@
   }
   .Pagar__segura__inner {
     height: 50px;
+    font-size: 14px;
   }
 }
 
@@ -21,6 +22,7 @@
   }
   .Pagar__segura__inner {
     height: 70px;
+    font-size: 10px;
   }
 }
 
@@ -91,7 +93,7 @@
   position: relative;
   left: 10%;
   width: 80%;
-  font-size: 14px;
+
   font-weight: bold;
   font-family: "Arima";
   text-align: center;
@@ -137,11 +139,9 @@
 
 .Pagar__total__agregar__inner {
   height: 50px;
-
   position: relative;
   margin: 0 auto;
   width: 100%;
-  font-size: 14px;
   font-weight: bold;
   font-family: "Arima";
   pointer-events: none;

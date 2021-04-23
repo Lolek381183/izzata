@@ -222,7 +222,7 @@ class Pagar extends React.Component {
       Mensaje1: "",
     });
     var win = window.open(
-      "https://api.whatsapp.com/send?phone=573205872130&text=Hola!%20Quiero%20continuar%20mi%20pedido%20contigo%20numero%20" +
+      "https://api.whatsapp.com/send?phone=573225959683&text=Hola!%20Quiero%20continuar%20mi%20pedido%20contigo%20numero%20" +
         this.state.form.Nombre.slice(0, 1) +
         this.state.form.Apellido.slice(0, 1) +
         this.state.fecha.getFullYear().toString() +
