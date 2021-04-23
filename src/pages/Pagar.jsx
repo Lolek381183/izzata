@@ -136,6 +136,59 @@ class Pagar extends React.Component {
     }
   };
 
+  addProduct1 = (e) => {
+    if (
+      this.state.form.Nombre !== "" &&
+      this.state.form.Apellido !== "" &&
+      this.state.form.Email !== "" &&
+      this.state.form.Telefono !== "" &&
+      this.state.form.Direccion !== "" &&
+      this.state.form.Documento !== "" &&
+      this.state.form.Departamento !== "" &&
+      this.state.form.Municipio !== ""
+    ) {
+      this.setState({
+        Mensaje1: "",
+      });
+      console.log(this.props.productos);
+      Axios.post(this.state.backend + "/email", {
+        Apellido: this.state.form.Apellido,
+        Nombre: this.state.form.Nombre,
+        Email: this.state.form.Email,
+        Telefono: this.state.form.Telefono,
+        Direccion: this.state.form.Direccion,
+        Documento: this.state.form.Documento,
+        Departamento: this.state.form.Departamento,
+        Municipio: this.state.form.Municipio,
+        Precio:
+          this.props.suma +
+          Number(this.state.Envio) -
+          this.props.suma * Number(this.state.Codigos.descuento),
+        Codigo: this.state.Codigo,
+        Referencia:
+          this.state.form.Nombre.slice(0, 1) +
+          this.state.form.Apellido.slice(0, 1) +
+          this.state.fecha.getFullYear().toString() +
+          this.state.fecha.getDay().toString() +
+          this.state.fecha.getDate().toString() +
+          this.state.fecha.getHours().toString() +
+          this.state.fecha.getMinutes().toString() +
+          this.state.fecha.getSeconds().toString() +
+          this.state.fecha.getMilliseconds().toString(),
+        Productos: this.props.productos.map(
+          (j) => j.nombre + "-" + j.talla + "-" + j.color
+        ),
+      }).then((response) => {
+        console.log(response);
+        this.handlePay1();
+      });
+    } else {
+      this.setState({
+        Mensaje1: "Campos faltantes",
+      });
+    }
+  };
+
   handlePay = () => {
     this.setState({
       Mensaje1: "",
@@ -159,6 +212,26 @@ class Pagar extends React.Component {
         this.state.fecha.getSeconds().toString() +
         this.state.fecha.getMilliseconds().toString() +
         "&redirectUrl=https%3A%2F%2Ftransaction-redirect.wompi.co%2Fcheck",
+      "_self"
+    );
+    win.focus();
+  };
+
+  handlePay1 = () => {
+    this.setState({
+      Mensaje1: "",
+    });
+    var win = window.open(
+      "https://api.whatsapp.com/send?phone=573205872130&text=Hola!%20Quiero%20continuar%20mi%20pedido%20contigo%20numero%20" +
+        this.state.form.Nombre.slice(0, 1) +
+        this.state.form.Apellido.slice(0, 1) +
+        this.state.fecha.getFullYear().toString() +
+        this.state.fecha.getDay().toString() +
+        this.state.fecha.getDate().toString() +
+        this.state.fecha.getHours().toString() +
+        this.state.fecha.getMinutes().toString() +
+        this.state.fecha.getSeconds().toString() +
+        this.state.fecha.getMilliseconds().toString(),
       "_self"
     );
     win.focus();
@@ -429,14 +502,39 @@ class Pagar extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="Pagar__segura" onClick={this.addProduct}>
+              </div>
+              <div className="Pagar__segura">
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "45% 10% 45%",
+                    width: "80%",
+                    paddingLeft: "10%",
+                    fontSize: "1px",
+                    zIndex: "1000",
+                  }}
+                >
+                  <div
+                    className="Pagar__segura__inner"
+                    onClick={this.addProduct}
+                  >
+                    <div className="Pagar__segura__inner__inner">
+                      PAGAR EN LINEA
+                    </div>
+                  </div>
+                  <div></div>
                   <div className="Pagar__segura__inner">
-                    <div className="Pagar__segura__inner__inner">PAGAR</div>
+                    <div
+                      className="Pagar__segura__inner__inner__1"
+                      onClick={this.addProduct1}
+                    >
+                      COMUNICATE CON UNA ASESORA
+                    </div>
                   </div>
-                  <div className="Blank__Space"> </div>
-                  <div className="Pagar__total__codigo">
-                    <span> {this.state.Mensaje1}</span>
-                  </div>
+                </div>
+                <div className="Blank__Space"> </div>
+                <div className="Pagar__total__codigo">
+                  <span> {this.state.Mensaje1}</span>
                 </div>
               </div>
               <div className="Blank__Space"> </div>

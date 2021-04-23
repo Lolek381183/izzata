@@ -1,4 +1,9 @@
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1312px) {
+  .Pagar__segura__inner__inner__1 {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 14px;
+  }
   .Pagar__inner {
     width: 80%;
     margin: 0 auto;
@@ -7,14 +12,76 @@
     display: grid;
     grid-template-columns: 30% 2.5% 67.5%;
   }
+  .Pagar__segura__inner {
+    height: 50px;
+  }
+  .Pagar__segura__inner__inner {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 14px;
+  }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 1311px) and (min-width: 900px) {
   .Pagar__inner {
     width: 80%;
     margin: 0 auto;
     height: auto;
     position: relative;
+    display: grid;
+    grid-template-columns: 30% 2.5% 67.5%;
+  }
+  .Pagar__segura__inner {
+    height: 50px;
+  }
+  .Pagar__segura__inner__inner {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 14px;
+  }
+  .Pagar__segura__inner__inner__1 {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 4px;
+  }
+}
+
+@media screen and (max-width: 899px) and (min-width: 480px) {
+  .Pagar__inner {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+  }
+  .Pagar__segura__inner {
+    height: 70px;
+  }
+  .Pagar__segura__inner__inner {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 24px;
+  }
+  .Pagar__segura__inner__inner__1 {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 12px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .Pagar__inner {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+  }
+  .Pagar__segura__inner {
+    height: 70px;
+  }
+  .Pagar__segura__inner__inner {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 14px;
   }
 }
 
@@ -78,26 +145,20 @@
 
 .Pagar__segura {
   text-align: center;
-  cursor: pointer;
+  position: relative;
 }
 
 .Pagar__segura__inner {
-  height: 50px;
   position: relative;
-  left: 25%;
-  width: 50%;
+  left: 10%;
+  width: 80%;
   font-size: 14px;
   font-weight: bold;
   font-family: "Arima";
-  pointer-events: none;
   text-align: center;
   color: white;
   background-color: black;
-}
-
-.Pagar__segura__inner__inner {
   cursor: pointer;
-  padding-top: 14px;
 }
 
 .Pagar__total {
